@@ -1,0 +1,332 @@
+{
+  "certificates/ipp-seminar": {
+    "src": "/media/certificates/ipp-seminar.webp",
+    "avif": "/media/certificates/ipp-seminar.avif",
+    "width": 1800,
+    "height": 2538
+  },
+  "certificates/ipp-seminar-tile": {
+    "src": "/media/certificates/ipp-seminar-tile.webp",
+    "avif": "/media/certificates/ipp-seminar-tile.avif",
+    "width": 640,
+    "height": 903
+  },
+  "certificates/itdbm": {
+    "src": "/media/certificates/itdbm.webp",
+    "avif": "/media/certificates/itdbm.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "certificates/itdbm-tile": {
+    "src": "/media/certificates/itdbm-tile.webp",
+    "avif": "/media/certificates/itdbm-tile.avif",
+    "width": 640,
+    "height": 453
+  },
+  "certificates/lda-letter": {
+    "src": "/media/certificates/lda-letter.webp",
+    "avif": "/media/certificates/lda-letter.avif",
+    "width": 1800,
+    "height": 2902
+  },
+  "certificates/lda-letter-tile": {
+    "src": "/media/certificates/lda-letter-tile.webp",
+    "avif": "/media/certificates/lda-letter-tile.avif",
+    "width": 640,
+    "height": 1032
+  },
+  "certificates/winter-school-award": {
+    "src": "/media/certificates/winter-school-award.webp",
+    "avif": "/media/certificates/winter-school-award.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "certificates/winter-school-award-tile": {
+    "src": "/media/certificates/winter-school-award-tile.webp",
+    "avif": "/media/certificates/winter-school-award-tile.avif",
+    "width": 640,
+    "height": 453
+  },
+  "certificates/winter-school-participation": {
+    "src": "/media/certificates/winter-school-participation.webp",
+    "avif": "/media/certificates/winter-school-participation.avif",
+    "width": 1280,
+    "height": 781
+  },
+  "certificates/winter-school-participation-tile": {
+    "src": "/media/certificates/winter-school-participation-tile.webp",
+    "avif": "/media/certificates/winter-school-participation-tile.avif",
+    "width": 640,
+    "height": 391
+  },
+  "portrait/fahad-avatar": {
+    "src": "/media/portrait/fahad-avatar.webp",
+    "avif": "/media/portrait/fahad-avatar.avif",
+    "width": 160,
+    "height": 160
+  },
+  "portrait/fahad-avatar@2x": {
+    "src": "/media/portrait/fahad-avatar@2x.webp",
+    "avif": "/media/portrait/fahad-avatar@2x.avif",
+    "width": 320,
+    "height": 320
+  },
+  "portrait/fahad-figure": {
+    "src": "/media/portrait/fahad-figure.webp",
+    "avif": "/media/portrait/fahad-figure.avif",
+    "width": 463,
+    "height": 849
+  },
+  "projects/allama-iqbal-industrial-estate/card": {
+    "src": "/media/projects/allama-iqbal-industrial-estate/card.webp",
+    "avif": "/media/projects/allama-iqbal-industrial-estate/card.avif",
+    "width": 1600,
+    "height": 1087
+  },
+  "projects/allama-iqbal-industrial-estate/page-1": {
+    "src": "/media/projects/allama-iqbal-industrial-estate/page-1.webp",
+    "avif": "/media/projects/allama-iqbal-industrial-estate/page-1.avif",
+    "width": 1800,
+    "height": 1223
+  },
+  "projects/allama-iqbal-industrial-estate/page-2": {
+    "src": "/media/projects/allama-iqbal-industrial-estate/page-2.webp",
+    "avif": "/media/projects/allama-iqbal-industrial-estate/page-2.avif",
+    "width": 1800,
+    "height": 973
+  },
+  "projects/allama-iqbal-industrial-estate/page-3": {
+    "src": "/media/projects/allama-iqbal-industrial-estate/page-3.webp",
+    "avif": "/media/projects/allama-iqbal-industrial-estate/page-3.avif",
+    "width": 1800,
+    "height": 1961
+  },
+  "projects/allama-iqbal-industrial-estate/page-4": {
+    "src": "/media/projects/allama-iqbal-industrial-estate/page-4.webp",
+    "avif": "/media/projects/allama-iqbal-industrial-estate/page-4.avif",
+    "width": 1800,
+    "height": 1961
+  },
+  "projects/allama-iqbal-industrial-estate/tile": {
+    "src": "/media/projects/allama-iqbal-industrial-estate/tile.webp",
+    "avif": "/media/projects/allama-iqbal-industrial-estate/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/delhi-gate-regeneration/card": {
+    "src": "/media/projects/delhi-gate-regeneration/card.webp",
+    "avif": "/media/projects/delhi-gate-regeneration/card.avif",
+    "width": 1628,
+    "height": 1139
+  },
+  "projects/delhi-gate-regeneration/page-1": {
+    "src": "/media/projects/delhi-gate-regeneration/page-1.webp",
+    "avif": "/media/projects/delhi-gate-regeneration/page-1.avif",
+    "width": 1800,
+    "height": 1271
+  },
+  "projects/delhi-gate-regeneration/tile": {
+    "src": "/media/projects/delhi-gate-regeneration/tile.webp",
+    "avif": "/media/projects/delhi-gate-regeneration/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/fa-avenue-1/card": {
+    "src": "/media/projects/fa-avenue-1/card.webp",
+    "avif": "/media/projects/fa-avenue-1/card.avif",
+    "width": 1563,
+    "height": 1198
+  },
+  "projects/fa-avenue-1/page-1": {
+    "src": "/media/projects/fa-avenue-1/page-1.webp",
+    "avif": "/media/projects/fa-avenue-1/page-1.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "projects/fa-avenue-1/tile": {
+    "src": "/media/projects/fa-avenue-1/tile.webp",
+    "avif": "/media/projects/fa-avenue-1/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/fasan-villas/card": {
+    "src": "/media/projects/fasan-villas/card.webp",
+    "avif": "/media/projects/fasan-villas/card.avif",
+    "width": 1642,
+    "height": 2261
+  },
+  "projects/fasan-villas/page-1": {
+    "src": "/media/projects/fasan-villas/page-1.webp",
+    "avif": "/media/projects/fasan-villas/page-1.avif",
+    "width": 1800,
+    "height": 2544
+  },
+  "projects/fasan-villas/tile": {
+    "src": "/media/projects/fasan-villas/tile.webp",
+    "avif": "/media/projects/fasan-villas/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/hanjarwal-tod/card": {
+    "src": "/media/projects/hanjarwal-tod/card.webp",
+    "avif": "/media/projects/hanjarwal-tod/card.avif",
+    "width": 1636,
+    "height": 1397
+  },
+  "projects/hanjarwal-tod/page-1": {
+    "src": "/media/projects/hanjarwal-tod/page-1.webp",
+    "avif": "/media/projects/hanjarwal-tod/page-1.avif",
+    "width": 1800,
+    "height": 1531
+  },
+  "projects/hanjarwal-tod/page-2": {
+    "src": "/media/projects/hanjarwal-tod/page-2.webp",
+    "avif": "/media/projects/hanjarwal-tod/page-2.avif",
+    "width": 1800,
+    "height": 1531
+  },
+  "projects/hanjarwal-tod/tile": {
+    "src": "/media/projects/hanjarwal-tod/tile.webp",
+    "avif": "/media/projects/hanjarwal-tod/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/heritage-buffer-map/card": {
+    "src": "/media/projects/heritage-buffer-map/card.webp",
+    "avif": "/media/projects/heritage-buffer-map/card.avif",
+    "width": 1628,
+    "height": 1164
+  },
+  "projects/heritage-buffer-map/page-1": {
+    "src": "/media/projects/heritage-buffer-map/page-1.webp",
+    "avif": "/media/projects/heritage-buffer-map/page-1.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "projects/heritage-buffer-map/tile": {
+    "src": "/media/projects/heritage-buffer-map/tile.webp",
+    "avif": "/media/projects/heritage-buffer-map/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/house-44x39/card": {
+    "src": "/media/projects/house-44x39/card.webp",
+    "avif": "/media/projects/house-44x39/card.avif",
+    "width": 1334,
+    "height": 1188
+  },
+  "projects/house-44x39/page-1": {
+    "src": "/media/projects/house-44x39/page-1.webp",
+    "avif": "/media/projects/house-44x39/page-1.avif",
+    "width": 1800,
+    "height": 1271
+  },
+  "projects/house-44x39/page-2": {
+    "src": "/media/projects/house-44x39/page-2.webp",
+    "avif": "/media/projects/house-44x39/page-2.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "projects/house-44x39/page-3": {
+    "src": "/media/projects/house-44x39/page-3.webp",
+    "avif": "/media/projects/house-44x39/page-3.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "projects/house-44x39/page-4": {
+    "src": "/media/projects/house-44x39/page-4.webp",
+    "avif": "/media/projects/house-44x39/page-4.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "projects/house-44x39/page-5": {
+    "src": "/media/projects/house-44x39/page-5.webp",
+    "avif": "/media/projects/house-44x39/page-5.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "projects/house-44x39/page-6": {
+    "src": "/media/projects/house-44x39/page-6.webp",
+    "avif": "/media/projects/house-44x39/page-6.avif",
+    "width": 1800,
+    "height": 1273
+  },
+  "projects/house-44x39/page-7": {
+    "src": "/media/projects/house-44x39/page-7.webp",
+    "avif": "/media/projects/house-44x39/page-7.avif",
+    "width": 1800,
+    "height": 1271
+  },
+  "projects/house-44x39/tile": {
+    "src": "/media/projects/house-44x39/tile.webp",
+    "avif": "/media/projects/house-44x39/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/orange-line-landuse/card": {
+    "src": "/media/projects/orange-line-landuse/card.webp",
+    "avif": "/media/projects/orange-line-landuse/card.avif",
+    "width": 1628,
+    "height": 1128
+  },
+  "projects/orange-line-landuse/page-1": {
+    "src": "/media/projects/orange-line-landuse/page-1.webp",
+    "avif": "/media/projects/orange-line-landuse/page-1.avif",
+    "width": 1800,
+    "height": 1272
+  },
+  "projects/orange-line-landuse/tile": {
+    "src": "/media/projects/orange-line-landuse/tile.webp",
+    "avif": "/media/projects/orange-line-landuse/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "projects/residential-cad-series/card": {
+    "src": "/media/projects/residential-cad-series/card.webp",
+    "avif": "/media/projects/residential-cad-series/card.avif",
+    "width": 1638,
+    "height": 1432
+  },
+  "projects/residential-cad-series/page-1": {
+    "src": "/media/projects/residential-cad-series/page-1.webp",
+    "avif": "/media/projects/residential-cad-series/page-1.avif",
+    "width": 1800,
+    "height": 1568
+  },
+  "projects/residential-cad-series/page-2": {
+    "src": "/media/projects/residential-cad-series/page-2.webp",
+    "avif": "/media/projects/residential-cad-series/page-2.avif",
+    "width": 1800,
+    "height": 3639
+  },
+  "projects/residential-cad-series/page-3": {
+    "src": "/media/projects/residential-cad-series/page-3.webp",
+    "avif": "/media/projects/residential-cad-series/page-3.avif",
+    "width": 1800,
+    "height": 3639
+  },
+  "projects/residential-cad-series/page-4": {
+    "src": "/media/projects/residential-cad-series/page-4.webp",
+    "avif": "/media/projects/residential-cad-series/page-4.avif",
+    "width": 1800,
+    "height": 3639
+  },
+  "projects/residential-cad-series/page-5": {
+    "src": "/media/projects/residential-cad-series/page-5.webp",
+    "avif": "/media/projects/residential-cad-series/page-5.avif",
+    "width": 1800,
+    "height": 3639
+  },
+  "projects/residential-cad-series/tile": {
+    "src": "/media/projects/residential-cad-series/tile.webp",
+    "avif": "/media/projects/residential-cad-series/tile.avif",
+    "width": 800,
+    "height": 600
+  },
+  "research/model-town-cycle-track": {
+    "src": "/media/research/model-town-cycle-track.webp",
+    "avif": "/media/research/model-town-cycle-track.avif",
+    "width": 1800,
+    "height": 1576
+  }
+}

@@ -8,10 +8,10 @@ export function Results({ level = 2 }: { level?: 1 | 2 } = {}) {
   const H = level === 1 ? "h1" : "h2";
   const months = attainment.months.map((m) => ({ ...m, pct: pctOfTarget(m) }));
   return (
-    <section id="results" className="section" aria-labelledby="results-title" data-track="business">
+    <section id="results" className="section panel" aria-labelledby="results-title" data-track="business">
       <div className="section-head">
         <H id="results-title" className="display h2">
-          {copy.results.title}
+          <span className="shine">{copy.results.title}</span>
         </H>
         <p className="small">{copy.results.caption}</p>
       </div>

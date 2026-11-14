@@ -2,7 +2,8 @@ import { contact } from "@content/contact.ts";
 import { copy } from "@content/copy.ts";
 import { site } from "@content/site.ts";
 import { CopyButton } from "@/components/CopyButton";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { MailCta } from "@/components/MailCta";
+import { ArrowUpRight, Download } from "lucide-react";
 
 type Channel = { label: string; value: string; href?: string; external?: boolean; copy?: string };
 
@@ -17,20 +18,25 @@ export function Contact({ level = 2 }: { level?: 1 | 2 } = {}) {
     { label: "Based in", value: contact.location },
   ];
   return (
-    <section id="contact" className="section contact" aria-labelledby="contact-title">
+    <section id="contact" className="section panel contact" aria-labelledby="contact-title">
       <div>
         <H id="contact-title" className="display contact__title">
-          {copy.contact.title}
+          <span className="shine">{copy.contact.title}</span>
         </H>
         <p className="contact__lead">{copy.contact.lead}</p>
         <p className="contact__status small">{site.availability}</p>
-        <p style={{ marginTop: 28 }}>
-          <a href={`mailto:${contact.email}`} className="btn">
-            Write an email
-            <span className="btn__disc" aria-hidden="true">
-              <ArrowRight size={18} strokeWidth={2} />
-            </span>
-          </a>
+        <p className="btn-row" style={{ marginTop: 28 }}>
+          <MailCta href={`mailto:${contact.email}`} rest="Write an email" />
+        </p>
+        <p className="label" style={{ marginTop: 28 }}>
+          Résumés
+        </p>
+        <p className="btn-row" style={{ marginTop: 10 }}>
+          {contact.resumes.map((r) => (
+            <a key={r.track} className="btn-ghost" href={r.file} download={r.download} data-track={r.track}>
+              <Download size={16} strokeWidth={1.75} aria-hidden="true" /> {r.label}
+            </a>
+          ))}
         </p>
       </div>
       <ul className="channels">

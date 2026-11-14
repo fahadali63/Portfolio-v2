@@ -5,10 +5,10 @@ import { ArrowUpRight, Plus } from "lucide-react";
 export function Research({ level = 2 }: { level?: 1 | 2 } = {}) {
   const H = level === 1 ? "h1" : "h2";
   return (
-    <section id="research" className="section" aria-labelledby="research-title" data-track="planning">
+    <section id="research" className="section panel" aria-labelledby="research-title" data-track="planning">
       <div className="section-head">
         <H id="research-title" className="display h2">
-          {copy.research.title}
+          <span className="shine">{copy.research.title}</span>
         </H>
         <p className="small">{copy.research.caption}</p>
       </div>

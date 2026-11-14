@@ -2491,7 +2491,7 @@ body {
   height: 28px;
   border-radius: 50%;
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
   font-size: 0.75rem;
   box-shadow: none;
 }
@@ -2510,7 +2510,7 @@ body {
 }
 .site-nav__links a[aria-current="location"] {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
   box-shadow: none;
 }
 .site-nav__end .btn--accent,
@@ -2533,7 +2533,7 @@ body {
 .btn--accent,
 .btn--dark {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
   border: 0;
 }
 .btn--accent:hover,
@@ -2559,7 +2559,7 @@ body {
 }
 .btn--line:hover {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
 }
 .chip,
 .data-table summary,
@@ -2576,7 +2576,7 @@ body {
 .icon-btn:hover,
 .data-table summary:hover {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
   box-shadow: none;
 }
 
@@ -2812,7 +2812,7 @@ body {
 }
 .pill {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
 }
 .pill--outline {
   background: transparent;
@@ -2821,7 +2821,7 @@ body {
 }
 .deal__side .pill {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
 }
 .grid-cells > li,
 .facts > div,
@@ -2918,7 +2918,7 @@ body {
   padding: 6px 12px;
   border-radius: 999px;
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
   font-size: 0.8125rem;
   font-weight: 500;
 }
@@ -2932,7 +2932,7 @@ body {
 }
 .contact .btn {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
 }
 
 /* Footer: dark card */
@@ -3055,7 +3055,7 @@ body {
 .site-nav__links a[aria-current="page"],
 .nav-group summary.is-active {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--on-ink, var(--surface));
 }
 .nav-group {
   position: relative;

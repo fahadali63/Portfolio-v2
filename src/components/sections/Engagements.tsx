@@ -5,10 +5,10 @@ import { engagements } from "@content/index.ts";
 export function Engagements({ level = 2 }: { level?: 1 | 2 } = {}) {
   const H = level === 1 ? "h1" : "h2";
   return (
-    <section id="engagements" className="section" aria-labelledby="engagements-title" data-track="business">
+    <section id="engagements" className="section panel" aria-labelledby="engagements-title" data-track="business">
       <div className="section-head">
         <H id="engagements-title" className="display h2">
-          {copy.results.engagementsTitle}
+          <span className="shine">{copy.results.engagementsTitle}</span>
         </H>
         <p className="small">{copy.results.engagementsCaption}</p>
       </div>

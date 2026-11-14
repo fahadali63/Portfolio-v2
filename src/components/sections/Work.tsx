@@ -57,10 +57,10 @@ export function Work({ level = 2 }: { level?: 1 | 2 } = {}) {
   const H = level === 1 ? "h1" : "h2";
   const rows = rowsOf(projects);
   return (
-    <section id="work" className="section" aria-labelledby="work-title" data-track="planning">
+    <section id="work" className="section panel" aria-labelledby="work-title" data-track="planning">
       <div className="section-head">
         <H id="work-title" className="display h2">
-          {copy.work.title}
+          <span className="shine">{copy.work.title}</span>
         </H>
         <p className="small">{copy.work.caption}</p>
       </div>

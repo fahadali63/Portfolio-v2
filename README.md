@@ -1,15 +1,21 @@
-# Fahad Ali — Portfolio (v3)
+# Fahad Ali — Portfolio (v5)
 
-A one-page portfolio with a page for each planning project, built with Next.js and exported to plain HTML.
-Design: light grey sheet, tall condensed caps (Bebas Neue) with a serif (Instrument Serif), portrait in an arch —
-see [docs/design.md](docs/design.md).
+A portfolio split by career, built with Next.js and exported to plain HTML.
+Design: frosted-glass panels over a dark page with slow warm glows, a left rail for navigation and a
+Ctrl K / ⌘ K quick-actions modal. Colours and glass settings are the tokens at the top of `src/app/glass.css`.
 
 | Route | Page |
 |---|---|
-| `/` | Hero · capabilities · worked with · `#about` · `#work` · `#experience` · `#results` · `#research` · `#recognition` · `#contact` |
+| `/` | Neutral home: who Fahad is, then a choice of career |
+| `/planning`, `/business` | One page per career: summary, résumé download, numbers, expertise, experience, links to proof |
+| `/portfolio`, `/research`, `/certificates` | Urban planning proof |
+| `/results`, `/engagements` | Business development proof |
 | `/work/<slug>` | One page per project, with every drawing sheet |
+| `/about`, `/worked-with`, `/contact`, `/experience` | Shared pages |
 
-The old addresses `/urban-planning`, `/business-development` and `/contact` redirect to the matching section (`netlify.toml`).
+The old addresses `/urban-planning` and `/business-development` redirect to the career pages (`netlify.toml`).
+The menu lives in `src/components/shell/nav.ts`; the home, career and About wording in `content/data/pages.ts`;
+company websites in `content/data/experience.ts`; résumé PDFs in `public/resume/`.
 
 ## Run it
 

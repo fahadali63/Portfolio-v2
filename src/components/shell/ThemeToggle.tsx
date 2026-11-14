@@ -5,12 +5,17 @@ import { useEffect, useState } from "react";
 /** Light / dark. Follows the system until chosen, then remembers. */
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark" | null>(null);
-  useEffect(() => setTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light"), []);
+  useEffect(() => {
+    const read = () => setTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
+    read();
+    window.addEventListener("themechange", read);
+    return () => window.removeEventListener("themechange", read);
+  }, []);
   const next = theme === "dark" ? "light" : "dark";
   return (
     <button
       type="button"
-      className="sq-btn"
+      className="icon-btn"
       aria-label={`Switch to ${next} appearance`}
       title={`Switch to ${next} appearance`}
       onClick={() => {

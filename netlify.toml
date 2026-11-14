@@ -23,20 +23,15 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Pages from the previous site now live as sections of the home page.
+# Addresses from the previous site point at the matching career page.
 [[redirects]]
   from = "/urban-planning"
-  to = "/#work"
+  to = "/planning"
   status = 301
 
 [[redirects]]
   from = "/business-development"
-  to = "/#results"
-  status = 301
-
-[[redirects]]
-  from = "/contact"
-  to = "/#contact"
+  to = "/business"
   status = 301
 
 [[redirects]]

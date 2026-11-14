@@ -3,14 +3,14 @@ import { Recognition } from "@/components/sections/Recognition";
 
 export const metadata: Metadata = {
   title: "Certificates",
-  description: "Certificates, letters and awards — planning and business development.",
+  description: "Planning and GIS certificates, completion letters and awards.",
   alternates: { canonical: "/certificates" },
 };
 
 export default function Page() {
   return (
     <main id="main" className="main main--page">
-      <Recognition level={1} />
+      <Recognition track="planning" level={1} />
     </main>
   );
 }

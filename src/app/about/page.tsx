@@ -3,14 +3,14 @@ import { About } from "@/components/sections/About";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Fahad Ali — two careers, one way of working.",
+  description: "About Fahad Ali: City & Regional Planning student at UET Lahore with two working careers, planning and GIS, and business development.",
   alternates: { canonical: "/about" },
 };
 
 export default function Page() {
   return (
     <main id="main" className="main main--page">
-      <About level={1} />
+      <About />
     </main>
   );
 }

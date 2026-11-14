@@ -1,14 +1,14 @@
 import { copy } from "@content/copy.ts";
 import { certificationsFor } from "@content/index.ts";
 import { media } from "@content/media.ts";
-import type { Certificate } from "@content/schema.ts";
+import type { Certificate, Track } from "@content/schema.ts";
 import { Img } from "@/components/Img";
 import { Award, FileLock } from "lucide-react";
 
 function Doc({ c }: { c: Certificate }) {
   const meta = [c.issuer, c.date].filter(Boolean).join(" · ");
   return (
-    <li className="doc" data-track={c.track}>
+    <li className="doc">
       {c.publicPreview && c.image ? (
         <a
           className="doc__frame"
@@ -41,34 +41,21 @@ function Doc({ c }: { c: Certificate }) {
   );
 }
 
-export function Recognition({ level = 2 }: { level?: 1 | 2 } = {}) {
+/** The certificates of one career. Planning letters and business awards never share a page. */
+export function Recognition({ track, level = 2, id = "recognition" }: { track: Track; level?: 1 | 2; id?: string }) {
   const H = level === 1 ? "h1" : "h2";
-  const planning = certificationsFor("planning");
-  const business = certificationsFor("business");
+  const list = certificationsFor(track);
+  const planning = track === "planning";
   return (
-    <section id="recognition" className="section" aria-labelledby="recognition-title">
+    <section id={id} className="section panel" aria-labelledby={`${id}-title`} data-track={track}>
       <div className="section-head">
-        <H id="recognition-title" className="display h2">
-          {copy.recognition.title}
+        <H id={`${id}-title`} className="display h2">
+          <span className="shine">{planning ? copy.recognition.planningTitle : copy.recognition.businessTitle}</span>
         </H>
-        <p className="small">{copy.recognition.caption}</p>
+        <p className="small">{planning ? copy.recognition.caption : "Ideas Animation Studio"}</p>
       </div>
-
-      <h3 className="display h3" style={{ marginBottom: 16 }} data-track="planning">
-        {copy.recognition.planningTitle}
-      </h3>
-      <ul className="docs" data-track="planning">
-        {planning.map((c) => (
-          <Doc key={c.slug} c={c} />
-        ))}
-      </ul>
-
-      <div className="sub-head" data-track="business">
-        <h3 className="display h3">{copy.recognition.businessTitle}</h3>
-        <p className="small">Ideas Animation Studio</p>
-      </div>
-      <ul className="docs docs--three" data-track="business">
-        {business.map((c) => (
+      <ul className={`docs${planning ? "" : " docs--three"}`}>
+        {list.map((c) => (
           <Doc key={c.slug} c={c} />
         ))}
       </ul>
