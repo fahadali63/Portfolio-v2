@@ -3,6 +3,7 @@ import { site } from "@content/site.ts";
 import { ArrowUp, ArrowUpRight, Download } from "lucide-react";
 import { NavIcon } from "@/components/shell/NavIcon";
 import { nav } from "@/components/shell/nav";
+import { BrandMark } from "@/components/BrandMark";
 
 /**
  * Footer: the same grouping as the menu, so nothing new to learn at the bottom of a page.
@@ -23,8 +24,8 @@ export function Footer() {
         <div className="footer__id">
           <a href="/" className="brand">
             <span className="brand__mark" aria-hidden="true">
-              fa.
-            </span>
+            <BrandMark />
+          </span>
             <span className="brand__text">
               <span className="brand__name">{site.name}</span>
               <span className="brand__status">{site.location}</span>

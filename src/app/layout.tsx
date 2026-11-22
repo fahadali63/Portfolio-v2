@@ -2,7 +2,7 @@ import { contact } from "@content/contact.ts";
 import { education } from "@content/education.ts";
 import { site } from "@content/site.ts";
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import { projects } from "@content/index.ts";
 import { Footer } from "@/components/Footer";
 import { ShellScripts } from "@/components/shell/ShellScripts";
@@ -15,7 +15,7 @@ import "./globals.css";
 import "./glass.css";
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], weight: ["500", "600", "700", "800"], variable: "--font-display", display: "swap" });
-const sans = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-sans", display: "swap" });
+const sans = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-sans", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#16110d" },
-    { media: "(prefers-color-scheme: dark)", color: "#16110d" },
+    { media: "(prefers-color-scheme: light)", color: "#0b0b0c" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0b0c" },
   ],
 };
 

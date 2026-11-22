@@ -1,29 +1,29 @@
 /* ═════════════════════════ GLASS (v5, Nov 2026) ═════════════════════════
    Loaded after globals.css and wins over it.
-   Espresso page with slow warm glows behind everything; every panel is frosted glass so the page
-   shows through; panels-inside-panels are a second, lighter layer of the same glass.
-   Left rail navigation, one accent (marigold) plus one colour per career (teal = planning, coral = business).
-   Change colours in the two token blocks below. */
+   Brand v6 "The Shortcut" (22 Nov 2026): Lahore Mustard #F2B92B / Night Ink #0B0B0C / Signal Red #C8102E,
+   60/30/10. Dark (default) = ink page, mustard accent. Light = mustard page, ink accent, red-deep links.
+   Every panel is frosted glass so the page shows through; panels-inside-panels are a second, lighter layer.
+   Career colours: mustard = planning, coral red = business. Change colours in the two token blocks below. */
 
 :root,
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --page: #14100c;
-  --page-ink: #f7efd8;
-  --bg: #14100c;
-  --ink: #f7efd8;
-  --ink-2: #cbbfa5; /* 9.6:1 on the page */
-  --on-ink: #1a1410;
-  --accent: #f4b860;
-  --on-accent: #1d1509;
-  --plan: #6fd3c3;
-  --biz: #f59e6c;
+  --page: #0b0b0c;
+  --page-ink: #faf6ec;
+  --bg: #0b0b0c;
+  --ink: #faf6ec;
+  --ink-2: #c9c3b5; /* 11.2:1 on the page */
+  --on-ink: #0b0b0c;
+  --accent: #f2b92b; /* Lahore Mustard */
+  --on-accent: #0b0b0c;
+  --plan: #f2b92b;
+  --biz: #ff5a4e;
   --ok: #7ee2a1;
 
-  --glass: rgba(255, 243, 214, 0.06);
-  --glass-2: rgba(255, 243, 214, 0.055);
-  --glass-strong: rgba(28, 22, 17, 0.82);
-  --glass-line: rgba(255, 243, 214, 0.13);
+  --glass: rgba(250, 246, 236, 0.055);
+  --glass-2: rgba(250, 246, 236, 0.05);
+  --glass-strong: rgba(18, 18, 20, 0.86);
+  --glass-line: rgba(250, 246, 236, 0.12);
   --glass-hi: rgba(255, 255, 255, 0.09);
   --glass-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
   --scrim: rgba(8, 6, 4, 0.6);
@@ -32,17 +32,17 @@
   --surface-2: var(--glass-2);
   --line: transparent;
   --line-soft: var(--glass-line);
-  --peach-1: rgba(255, 243, 214, 0.05);
-  --peach-2: rgba(255, 243, 214, 0.09);
-  --peach-3: rgba(255, 243, 214, 0.13);
+  --peach-1: rgba(242, 185, 43, 0.06);
+  --peach-2: rgba(242, 185, 43, 0.11);
+  --peach-3: rgba(242, 185, 43, 0.16);
   --accent-fill: var(--ink);
   --dark-card: rgba(0, 0, 0, 0.26);
-  --c1: #e8c98a;
-  --c2: #b98a5e;
-  --c3: #f4b860;
-  --ring-track: rgba(255, 243, 214, 0.1);
-  --plan-bg: rgba(111, 211, 195, 0.14);
-  --biz-bg: rgba(245, 158, 108, 0.14);
+  --c1: #fbe4a2;
+  --c2: #c38e10;
+  --c3: #f2b92b;
+  --ring-track: rgba(250, 246, 236, 0.1);
+  --plan-bg: rgba(242, 185, 43, 0.14);
+  --biz-bg: rgba(255, 90, 78, 0.14);
   --r: 22px;
   --r-sm: 12px;
   --blur: 22px;
@@ -52,36 +52,36 @@
 }
 :root[data-theme="light"] {
   color-scheme: light;
-  --page: #f1e7d2;
-  --page-ink: #20170f;
-  --bg: #f1e7d2;
-  --ink: #20170f;
-  --ink-2: #594a3a; /* 7.4:1 on the page */
-  --on-ink: #fff9ea;
-  --accent: #b4530f;
-  --on-accent: #fff9ea;
-  --plan: #0f6b5f;
-  --biz: #ab4317;
+  --page: #f2b92b; /* 60% Lahore Mustard */
+  --page-ink: #0b0b0c;
+  --bg: #f2b92b;
+  --ink: #0b0b0c;
+  --ink-2: #2a2a2e; /* 8.0:1 on the page */
+  --on-ink: #faf6ec;
+  --accent: #0b0b0c; /* 30% Night Ink */
+  --on-accent: #f2b92b;
+  --plan: #5c4300; /* 5.2:1 on mustard */
+  --biz: #8f0b21; /* Red Deep, 5.3:1 on mustard */
   --ok: #17703a;
 
-  --glass: rgba(255, 255, 255, 0.5);
-  --glass-2: rgba(255, 255, 255, 0.42);
-  --glass-strong: rgba(255, 251, 242, 0.86);
-  --glass-line: rgba(60, 40, 20, 0.13);
+  --glass: rgba(250, 246, 236, 0.55);
+  --glass-2: rgba(250, 246, 236, 0.45);
+  --glass-strong: rgba(250, 246, 236, 0.9);
+  --glass-line: rgba(11, 11, 12, 0.14);
   --glass-hi: rgba(255, 255, 255, 0.7);
-  --glass-shadow: 0 24px 60px -34px rgba(90, 60, 20, 0.45);
-  --scrim: rgba(60, 44, 24, 0.35);
+  --glass-shadow: 0 24px 60px -34px rgba(60, 40, 0, 0.45);
+  --scrim: rgba(11, 11, 12, 0.35);
 
-  --peach-1: rgba(60, 40, 20, 0.04);
-  --peach-2: rgba(60, 40, 20, 0.07);
-  --peach-3: rgba(60, 40, 20, 0.11);
-  --dark-card: rgba(255, 255, 255, 0.4);
-  --c1: #c99a57;
-  --c2: #8f5a34;
-  --c3: #b4530f;
-  --ring-track: rgba(60, 40, 20, 0.1);
-  --plan-bg: rgba(15, 107, 95, 0.12);
-  --biz-bg: rgba(171, 67, 23, 0.12);
+  --peach-1: rgba(11, 11, 12, 0.04);
+  --peach-2: rgba(11, 11, 12, 0.07);
+  --peach-3: rgba(11, 11, 12, 0.11);
+  --dark-card: rgba(250, 246, 236, 0.45);
+  --c1: #5c4300;
+  --c2: #0b0b0c;
+  --c3: #c8102e;
+  --ring-track: rgba(11, 11, 12, 0.1);
+  --plan-bg: rgba(92, 67, 0, 0.12);
+  --biz-bg: rgba(143, 11, 33, 0.12);
 }
 
 /* Each career tints whatever sits inside it. */
@@ -138,20 +138,20 @@ html[data-cmdk="open"] body {
 .backdrop__glow--b {
   bottom: -24vmax;
   right: -12vmax;
-  background: radial-gradient(circle, var(--plan), transparent 68%);
-  opacity: 0.3;
+  background: radial-gradient(circle, #c38e10, transparent 68%);
+  opacity: 0.22;
   animation: drift-b 34s ease-in-out infinite alternate;
 }
 .backdrop__glow--c {
   top: 30%;
   left: 46%;
   width: 38vmax;
-  background: radial-gradient(circle, var(--biz), transparent 68%);
-  opacity: 0.24;
+  background: radial-gradient(circle, #c8102e, transparent 68%);
+  opacity: 0.16;
   animation: drift-c 40s ease-in-out infinite alternate;
 }
 :root[data-theme="light"] .backdrop__glow {
-  opacity: 0.5;
+  opacity: 0.28;
 }
 /* A faint survey grid: a planner's sheet under the glass. */
 .backdrop__grid {
@@ -422,13 +422,13 @@ a:hover .shine {
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: linear-gradient(140deg, var(--accent), color-mix(in srgb, var(--accent) 55%, var(--biz)));
-  color: var(--on-accent);
+  background: #f2b92b; /* the app-icon tile: mustard, ink route, red stroke */
+  color: #0b0b0c;
   font-family: var(--font-display), var(--font);
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: -0.03em;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 18px -8px var(--accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 18px -8px rgba(0, 0, 0, 0.5);
   transition: transform 400ms var(--spring);
 }
 .brand:hover .brand__mark {

@@ -5,6 +5,7 @@ import { MailCta } from "@/components/MailCta";
 import { SearchWidget } from "./SearchWidget";
 import { SideNav } from "./SideNav";
 import { ThemeToggle } from "./ThemeToggle";
+import { BrandMark } from "@/components/BrandMark";
 
 /**
  * Left rail, top to bottom in the order it gets used: who this is → find anything → browse by career →
@@ -16,7 +17,7 @@ export function Sidebar() {
       <div className="side__bar">
         <a href="/" className="brand">
           <span className="brand__mark" aria-hidden="true">
-            fa.
+            <BrandMark />
           </span>
           <span className="brand__text">
             <span className="brand__name">{site.name}</span>
