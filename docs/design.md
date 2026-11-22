@@ -1,3 +1,17 @@
+# Brand v6 — "The Shortcut" (22 Nov 2026)
+
+New personal identity, applied on top of the Glass layout (`src/app/glass.css`, token blocks at the top).
+
+- **Logo:** an f whose red crossbar is a desire line (`src/components/BrandMark.tsx`). It sits on a mustard tile in the nav and footer. The favicon is `src/app/icon.svg`.
+- **Colour, 60/30/10:** Lahore Mustard `#F2B92B` / Night Ink `#0B0B0C` / Signal Red `#C8102E`.
+  - Dark (default): ink page, paper text `#FAF6EC`, mustard accent; planning = mustard, business = coral `#FF5A4E`.
+  - Light: mustard page, ink text and buttons; planning = `#5C4300`, business = Red Deep `#8F0B21`. All text is 5.2:1 or better.
+- **Type:** Bricolage Grotesque for display, Instrument Sans for body (was Inter).
+- **Backdrop:** mustard, mustard-deep and a faint red glow over the survey grid.
+- Full brand kit: the `Fahad-Ali-Files` repo.
+
+---
+
 # Design — portfolio v4 "Marigold" (current)
 
 Final look, 18 Oct 2026, from a Showit template reference ("Marigold"): dark brown page (#2B231D) with butter-cream
