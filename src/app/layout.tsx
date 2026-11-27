@@ -11,11 +11,10 @@ import { nav } from "@/components/shell/nav";
 import { Sidebar } from "@/components/shell/Sidebar";
 import { splitTitle } from "@/lib/format";
 import { Lightbox } from "@/components/Lightbox";
-import "./globals.css";
-import "./glass.css";
+import "./brand.css";
 
-const display = Bricolage_Grotesque({ subsets: ["latin"], weight: ["500", "600", "700", "800"], variable: "--font-display", display: "swap" });
-const sans = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-sans", display: "swap" });
+const display = Bricolage_Grotesque({ subsets: ["latin"], axes: ["opsz", "wdth"], variable: "--font-display", display: "swap" });
+const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
@@ -33,8 +32,8 @@ export const viewport: Viewport = {
   ],
 };
 
-// Before first paint: appearance (stored choice, else dark) and a flag that scripts run (scroll reveals wait for it).
-const BEFORE_PAINT = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark'}d.dataset.theme=t}catch(e){d.dataset.theme='dark'}})()`;
+// Before first paint: the stored appearance, else Night Ink (the brand kit's website default).
+const BEFORE_PAINT = `(function(){var d=document.documentElement;var t;try{t=localStorage.getItem('theme')}catch(e){}d.dataset.theme=(t==='light'||t==='dark')?t:'dark'})()`;
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -55,8 +54,9 @@ const commands: Command[] = [
     g.items.map((i): Command => ({
       id: `go-${i.href}`,
       group: g.track ? g.label : "Pages",
-      label: g.track ? `${g.label}: ${i.label}` : i.label,
-      hint: i.hint,
+      label: g.track ? `${i.label}, ${g.label.toLowerCase()}` : i.label,
+      hint: i.code,
+      keywords: i.hint,
       icon: i.icon,
       href: i.href,
     })),
@@ -75,13 +75,13 @@ const commands: Command[] = [
   { id: "send-email", group: "Actions", label: "Write an email", keywords: "mail contact hire", icon: "mail", href: `mailto:${contact.email}` },
   { id: "linkedin", group: "Actions", label: "Open LinkedIn", keywords: "profile social", icon: "external", href: contact.linkedin, external: true },
   { id: "whatsapp", group: "Actions", label: "Message on WhatsApp", keywords: "phone chat", icon: "chat", href: contact.whatsapp, external: true },
-  { id: "theme", group: "Actions", label: "Switch light / dark appearance", keywords: "theme mode", icon: "theme", theme: true },
+  { id: "theme", group: "Actions", label: "Switch light or dark appearance", keywords: "theme mode", icon: "theme", theme: true },
   ...projects.map((p): Command => ({
     id: `project-${p.slug}`,
     group: "Planning projects",
     label: splitTitle(p.title)[0],
     hint: p.category,
-    keywords: `${p.title} ${p.location ?? ""} ${p.tools.join(" ")}`,
+    keywords: `P-02 ${p.title} ${p.location ?? ""} ${p.tools.join(" ")}`,
     icon: "file",
     href: `/work/${p.slug}`,
   })),
@@ -89,7 +89,7 @@ const commands: Command[] = [
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB" className={`${sans.variable} ${display.variable}`} data-filter="all" suppressHydrationWarning>
+    <html lang="en-GB" className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: BEFORE_PAINT }} />
       </head>
@@ -97,12 +97,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <div className="backdrop" aria-hidden="true">
-          <span className="backdrop__glow backdrop__glow--a" />
-          <span className="backdrop__glow backdrop__glow--b" />
-          <span className="backdrop__glow backdrop__glow--c" />
-          <span className="backdrop__grid" />
-        </div>
         <div className="app" id="top">
           <Sidebar />
           <div className="app__main">

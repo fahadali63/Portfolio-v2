@@ -1,8 +1,12 @@
-# Fahad Ali — Portfolio (v5)
+# Fahad Ali — Portfolio (v7)
 
 A portfolio split by career, built with Next.js and exported to plain HTML.
-Design: frosted-glass panels over a dark page with slow warm glows, a left rail for navigation and a
-Ctrl K / ⌘ K quick-actions modal. Colours and glass settings are the tokens at the top of `src/app/glass.css`.
+Design: the Fahad Ali brand kit, "The Shortcut" (github.com/fahadali63/fahadbrandkit). Night Ink page by default
+with Lahore Mustard as the accent, a Mustard theme with ink buttons, Signal Red used once per page as the shortcut
+stroke under the headline, Bricolage Grotesque for headlines and Instrument Sans for text. Colours, type and motion
+are the tokens at the top of `src/app/brand.css`; the logo files are in `public/brand/`; the hero and section
+building blocks are in `src/components/Sheet.tsx` and the logo and stroke in `src/components/Brand.tsx`.
+The previous design is kept in `archive/v6-drawing-sheet/` (see `archive/README.md`).
 
 | Route | Page |
 |---|---|

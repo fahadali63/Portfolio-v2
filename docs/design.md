@@ -1,3 +1,11 @@
+# Portfolio v7 — the brand kit applied in full (27 Nov 2026)
+
+The brand below now drives the whole site: the kit's logo lockups (`public/brand/`), card layout and tokens in
+`src/app/brand.css`, the logo and shortcut stroke in `src/components/Brand.tsx`. The glass layout and `BrandMark.tsx`
+mentioned below were replaced; the v6 drawing-sheet design is archived in `archive/v6-drawing-sheet/`.
+
+---
+
 # Brand v6 — "The Shortcut" (22 Nov 2026)
 
 New personal identity, applied on top of the Glass layout (`src/app/glass.css`, token blocks at the top).
