@@ -3,8 +3,7 @@ import { useEffect } from "react";
 
 /**
  * Small page behaviours:
- * - phones: [data-nav-toggle] opens/closes the rail; Escape or a link click closes it
- * - panels fade up the first time they scroll into view (skipped for reduced motion)
+ * - phones: [data-nav-toggle] opens and closes the menu; Escape, a link or a tap outside closes it
  * - accordions in one [data-accordion] group close each other
  */
 export function ShellScripts() {
@@ -19,41 +18,25 @@ export function ShellScripts() {
       if (t.closest("[data-nav-toggle]")) setNav(root.dataset.nav !== "open");
       else if (root.dataset.nav === "open" && (t.closest(".side a") || !t.closest(".side"))) setNav(false);
     };
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && root.dataset.nav === "open" && setNav(false);
-    document.addEventListener("click", onClick);
-    document.addEventListener("keydown", onKey);
-
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape" || root.dataset.nav !== "open") return;
+      setNav(false);
+      document.querySelector<HTMLElement>("[data-nav-toggle]")?.focus();
+    };
     const onToggle = (e: Event) => {
       const d = e.target as HTMLDetailsElement;
-      if (!d.open) return;
-      d.closest("[data-accordion]")?.querySelectorAll<HTMLDetailsElement>("details[open]").forEach((o) => o !== d && o.parentElement === d.parentElement && (o.open = false));
+      if (!(d instanceof HTMLDetailsElement) || !d.open) return;
+      d.closest("[data-accordion]")
+        ?.querySelectorAll<HTMLDetailsElement>("details[open]")
+        .forEach((o) => o !== d && o.parentElement === d.parentElement && (o.open = false));
     };
+    document.addEventListener("click", onClick);
+    document.addEventListener("keydown", onKey);
     document.addEventListener("toggle", onToggle, true);
-
-    const targets = Array.from(document.querySelectorAll<HTMLElement>(".main > *, .main .reveal, .footer"));
-    let io: IntersectionObserver | undefined;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
-      targets.forEach((el) => el.classList.add("is-in"));
-    } else {
-      io = new IntersectionObserver(
-        (entries) =>
-          entries.forEach((en) => {
-            if (!en.isIntersecting) return;
-            en.target.classList.add("is-in");
-            io?.unobserve(en.target);
-          }),
-        { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
-      );
-      targets.forEach((el, i) => {
-        el.style.setProperty("--reveal-delay", `${Math.min(i, 4) * 60}ms`);
-        io!.observe(el);
-      });
-    }
     return () => {
       document.removeEventListener("click", onClick);
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("toggle", onToggle, true);
-      io?.disconnect();
     };
   }, []);
   return null;

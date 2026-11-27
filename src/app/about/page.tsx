@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="main main--page">
+    <main id="main" className="main">
       <About />
     </main>
   );

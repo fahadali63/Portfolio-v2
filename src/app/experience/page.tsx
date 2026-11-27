@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { roles } from "@content/index.ts";
 import { Experience } from "@/components/sections/Experience";
+import { TitleBlock } from "@/components/Sheet";
 
 export const metadata: Metadata = {
   title: "Experience",
@@ -9,9 +11,15 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="main main--page">
-      <Experience track="planning" title="Planning & GIS experience" caption="Newest first. Open a role for the details." level={1} />
-      <Experience track="business" title="Business development experience" caption="Newest first. Open a role for the details." />
+    <main id="main" className="main">
+      <TitleBlock
+        code="G-03"
+        title="All experience"
+        lead={<p>Both careers on one sheet, newest first within each. The career pages show the same roles with the skills and evidence around them.</p>}
+        meta={[{ label: "Roles", value: String(roles.length) }]}
+      />
+      <Experience track="planning" title="Planning and GIS" caption="Newest first. Open a role for the details." />
+      <Experience track="business" title="Business development" caption="Newest first. Open a role for the details." />
     </main>
   );
 }

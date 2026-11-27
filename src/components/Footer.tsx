@@ -1,15 +1,14 @@
 import { contact } from "@content/contact.ts";
 import { site } from "@content/site.ts";
-import { ArrowUp, ArrowUpRight, Download } from "lucide-react";
-import { NavIcon } from "@/components/shell/NavIcon";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
+import { Logo } from "@/components/Brand";
 import { nav } from "@/components/shell/nav";
 
 /**
- * Footer: the same grouping as the menu, so nothing new to learn at the bottom of a page.
- * Identity → each career's pages → ways to reach him and the résumés → a quiet legal line.
+ * The last row of the sheet. Same grouping as the menu, each page with its sheet code, then the ways to
+ * reach Fahad and the résumés. Nothing new to learn at the bottom of a page.
  */
 export function Footer() {
-  const careers = nav.filter((g) => g.track);
   const reach = [
     { href: `mailto:${contact.email}`, label: contact.email },
     { href: contact.phoneHref, label: contact.phone },
@@ -18,49 +17,41 @@ export function Footer() {
     { href: contact.instagram, label: "Instagram", ext: true },
   ];
   return (
-    <footer className="footer panel">
-      <div className="footer__top">
+    <footer className="footer">
+      <div className="footer__grid">
         <div className="footer__id">
-          <a href="/" className="brand">
-            <span className="brand__mark" aria-hidden="true">
-              fa.
-            </span>
-            <span className="brand__text">
-              <span className="brand__name">{site.name}</span>
-              <span className="brand__status">{site.location}</span>
-            </span>
-          </a>
-          <p className="footer__status">
-            <span className="status-dot" aria-hidden="true" /> {site.availability}
+          <Logo height={36} />
+          <p className="footer__note">{site.availability}</p>
+          <p className="footer__note footer__mono">
+            {site.location}
           </p>
         </div>
-
-        {careers.map((g) => (
+        {nav.map((g) => (
           <nav key={g.id} className="footer__col" aria-label={g.label} data-track={g.track}>
             <h2 className="footer__label">
-              <span className="nav-sec__dot" aria-hidden="true" /> {g.label}
+              {g.track && <span className="track-dot" aria-hidden="true" />}
+              {g.label}
             </h2>
             <ul>
               {g.items.map((i) => (
                 <li key={i.href}>
                   <a href={i.href} className="footer__link">
-                    <NavIcon name={i.icon} size={15} /> {i.label}
+                    {i.label}
                   </a>
                 </li>
               ))}
-              <li>
-                {contact.resumes
-                  .filter((r) => r.track === g.track)
-                  .map((r) => (
-                    <a key={r.file} href={r.file} download={r.download} className="footer__link">
-                      <Download size={15} strokeWidth={1.75} aria-hidden="true" /> Résumé (PDF)
+              {contact.resumes
+                .filter((r) => r.track === g.track)
+                .map((r) => (
+                  <li key={r.file}>
+                    <a href={r.file} download={r.download} className="footer__link">
+                      Résumé (PDF)
                     </a>
-                  ))}
-              </li>
+                  </li>
+                ))}
             </ul>
           </nav>
         ))}
-
         <div className="footer__col">
           <h2 className="footer__label">Reach me</h2>
           <ul>
@@ -70,7 +61,7 @@ export function Footer() {
                   {r.label}
                   {r.ext && (
                     <>
-                      <ArrowUpRight size={14} strokeWidth={1.9} aria-hidden="true" />
+                      <ArrowUpRight size={14} strokeWidth={1.5} aria-hidden="true" />
                       <span className="visually-hidden"> (opens in new tab)</span>
                     </>
                   )}
@@ -80,24 +71,12 @@ export function Footer() {
           </ul>
         </div>
       </div>
-
       <div className="footer__base">
         <p>
           © {new Date().getFullYear()} {site.name}
         </p>
-        <ul className="footer__meta">
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/worked-with">Worked with</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-        <a href="#top" className="footer__top-link">
-          Back to top <ArrowUp size={15} strokeWidth={2} aria-hidden="true" />
+        <a href="#top" className="footer__top">
+          Back to top <ArrowUp size={14} strokeWidth={1.5} aria-hidden="true" />
         </a>
       </div>
     </footer>

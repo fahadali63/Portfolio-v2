@@ -3,7 +3,7 @@ import { cta } from "@content/pages.ts";
 /**
  * The primary action. At rest: an envelope and "Get in touch". On hover or focus the label swaps and the
  * envelope loops: flap opens, the letter lifts out and tilts, a spark pops, it drops back and the flap shuts.
- * All CSS (see `.cta` in globals.css); stays still when the visitor prefers reduced motion.
+ * All CSS (see `.cta` in site.css); stays still when the visitor prefers reduced motion.
  */
 export function MailCta({ href = "/contact", block = false, rest = cta.rest, hover = cta.hover }: { href?: string; block?: boolean; rest?: string; hover?: string }) {
   return (
